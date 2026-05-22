@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UFC - Mundo de las Artes Marciales Mixtas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UFC Fighters</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,16 +15,38 @@
 
     .hero {
       background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-      url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed") center/cover;
-      min-height: 70vh;
+      url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
     }
 
     .card {
       background-color: #1c1c1c;
-      color: white;
       border: 1px solid #333;
+      transition: .3s;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #dc3545;
+    }
+
+    .card img {
+      height: 350px;
+      object-fit: cover;
     }
 
     .section-title {
@@ -33,125 +55,211 @@
     }
 
     footer {
-      background-color: #000;
+      background-color: black;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-danger" href="#">UFC</a>
+      <a class="navbar-brand text-danger fw-bold" href="#">UFC</a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
-          <li class="nav-item"><a class="nav-link" href="#estilos">Estilos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#peleadores">Peleadores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre UFC</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header id="inicio" class="hero">
-    <div class="container text-center">
-      <h1 class="display-3 fw-bold">Ultimate Fighting Championship</h1>
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <h1>Ultimate Fighting Championship</h1>
       <p class="lead mt-3">
-        La UFC es una de las organizaciones más importantes de artes marciales mixtas del mundo.
+        Los mejores peleadores del mundo en un solo lugar.
       </p>
-      <a href="#categorias" class="btn btn-danger btn-lg mt-3">Conocer más</a>
+
+      <a href="#peleadores" class="btn btn-danger btn-lg mt-3">
+        Ver Peleadores
+      </a>
     </div>
   </header>
 
-  <main class="container my-5">
+  <!-- PELEADORES -->
+  <section id="peleadores" class="container py-5">
 
-    <section class="text-center mb-5">
-      <h2 class="section-title">¿Qué es la UFC?</h2>
-      <p class="mt-3">
-        La UFC reúne peleadores de distintas disciplinas como boxeo, jiu-jitsu,
-        lucha olímpica, muay thai y kickboxing. Su objetivo es enfrentar estilos
-        diferentes dentro de un reglamento deportivo profesional.
-      </p>
-    </section>
+    <h2 class="text-center section-title mb-5">
+      Peleadores Destacados
+    </h2>
 
-    <section id="categorias" class="mb-5">
-      <h2 class="section-title text-center mb-4">Categorías destacadas</h2>
+    <div class="row g-4">
 
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <h4>Peso ligero</h4>
-            <p>Categoría rápida, técnica y muy competitiva, con peleadores explosivos.</p>
-          </div>
-        </div>
+      <!-- ISLAM -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-01/MAKHACHEV_ISLAM_BELT_10-21.png?itok=Z2WcXv6T" class="card-img-top">
 
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <h4>Peso welter</h4>
-            <p>Combina fuerza, resistencia y velocidad. Es una de las divisiones más populares.</p>
-          </div>
-        </div>
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Islam Makhachev
+            </h3>
 
-        <div class="col-md-4">
-          <div class="card h-100 p-3">
-            <h4>Peso pesado</h4>
-            <p>División donde predominan la potencia, el knockout y la fuerza física.</p>
+            <p class="card-text">
+              Campeón dominante del peso ligero. Especialista en grappling,
+              control y presión constante.
+            </p>
+
+            <span class="badge bg-danger">
+              Peso Ligero
+            </span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="estilos" class="mb-5">
-      <h2 class="section-title text-center mb-4">Estilos de combate</h2>
+      <!-- ILIA -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-02/TOPURIA_ILIA_L_BELT_02-17.png?itok=0HjD6B6M" class="card-img-top">
 
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card text-center p-3">
-            <h5>Boxeo</h5>
-            <p>Golpes de puño, defensa y movimiento.</p>
-          </div>
-        </div>
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Ilia Topuria
+            </h3>
 
-        <div class="col-md-3">
-          <div class="card text-center p-3">
-            <h5>Jiu-Jitsu</h5>
-            <p>Control en el suelo y sumisiones.</p>
-          </div>
-        </div>
+            <p class="card-text">
+              Uno de los peleadores más explosivos y completos de la UFC actual,
+              conocido por su striking y poder de knockout.
+            </p>
 
-        <div class="col-md-3">
-          <div class="card text-center p-3">
-            <h5>Lucha</h5>
-            <p>Derribos, control y presión física.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="card text-center p-3">
-            <h5>Muay Thai</h5>
-            <p>Patadas, rodillas, codos y clinch.</p>
+            <span class="badge bg-danger">
+              Peso Pluma
+            </span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="bg-dark p-4 rounded text-center">
-      <h2 class="section-title">Espíritu de la UFC</h2>
+      <!-- PETR YAN -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2023-03/YAN_PETR_L_03-11.png?itok=8wU8l0vL" class="card-img-top">
+
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Petr Yan
+            </h3>
+
+            <p class="card-text">
+              Peleador técnico y agresivo, reconocido por su boxeo de alto nivel
+              y presión constante.
+            </p>
+
+            <span class="badge bg-danger">
+              Peso Gallo
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- JON JONES -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2023-03/JONES_JON_BELT_03-04.png?itok=qj0rxmQ8" class="card-img-top">
+
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Jon Jones
+            </h3>
+
+            <p class="card-text">
+              Considerado por muchos el mejor peleador de MMA de todos los tiempos.
+            </p>
+
+            <span class="badge bg-danger">
+              Peso Pesado
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALEX -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2024-04/PEREIRA_ALEX_BELT_04-13.png?itok=Qy1W9l8s" class="card-img-top">
+
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Alex Pereira
+            </h3>
+
+            <p class="card-text">
+              Kickboxer élite con uno de los knockouts más peligrosos de la UFC.
+            </p>
+
+            <span class="badge bg-danger">
+              Peso Semipesado
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- O'MALLEY -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/background_image_xl/s3/2023-08/OMALLEY_SEAN_BELT_08-19.png?itok=GbKxv6-5" class="card-img-top">
+
+          <div class="card-body">
+            <h3 class="card-title text-danger">
+              Sean O'Malley
+            </h3>
+
+            <p class="card-text">
+              Peleador carismático con striking creativo y gran alcance.
+            </p>
+
+            <span class="badge bg-danger">
+              Peso Gallo
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="container py-5">
+    <div class="bg-dark p-5 rounded">
+      <h2 class="section-title mb-4">
+        Sobre la UFC
+      </h2>
+
       <p>
-        Más allá del combate, la UFC representa disciplina, preparación física,
-        estrategia, respeto y superación personal.
+        La UFC es la organización de artes marciales mixtas más importante del mundo.
+        Reúne peleadores de disciplinas como boxeo, lucha, jiu-jitsu brasileño,
+        kickboxing y muay thai.
       </p>
-    </section>
 
-  </main>
+      <p>
+        Actualmente cuenta con atletas de todo el mundo y millones de fanáticos
+        siguiendo eventos cada mes.
+      </p>
+    </div>
+  </section>
 
-  <footer id="contacto" class="text-center py-4">
-    <p class="mb-0">Sitio informativo sobre UFC - Proyecto HTML con Bootstrap</p>
+  <!-- FOOTER -->
+  <footer class="text-center py-4">
+    <p class="mb-0">
+      Sitio desarrollado con HTML + Bootstrap LOL
+    </p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
